@@ -1,0 +1,70 @@
+name: bantenprov_apps
+description: "Project Banten Prov via Aplikasi"
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  table_calendar: ^3.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1   # <-- plugin ganti icon
+
+
+# ------------ ICON CONFIGURATION ------------
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/Logobanten.png"  # <-- icon utama kamu
+# ---------------------------------------------
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/LogoUmah_Banten.png
+    - assets/images/Background_Banten.png
+    - assets/images/Logobantenataskanan.png
+    - assets/images/logokabupaten.png
+
+    - assets/images/kegiatan1.png
+    - assets/images/kegiatan2.png
+
+    - assets/images/Backgroundmain.png
+    - assets/images/Backgroundmain2.png
+    - assets/images/beritaInformasiHome.png
+
+    - assets/images/event1.png
+    - assets/images/event2.png
+
+    - assets/images/galeri1.png
+    - assets/images/galeri2.png
+    - assets/images/galeri3.png
+    - assets/images/galeri4.png
+    - assets/images/galeri5.png
+    - assets/images/galeri6.png
+    - assets/images/galeri7.png
+    - assets/images/galeri8.png
+
+    - assets/images/bg_galeri.png
+
+    - assets/images/laporan1.png
+    - assets/images/laporan2.png
+    - assets/images/laporan3.png
+    - assets/images/laporan4.png
+
+    - assets/images/bglogin.png
+    - assets/images/logoUmahBantenpolos.png
