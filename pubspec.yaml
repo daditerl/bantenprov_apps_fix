@@ -1,82 +1,55 @@
 name: bantenprov_apps
 description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.2.2 <4.0.0'
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
+# ===================== DEPENDENCIES =====================
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.3.0
 
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.3.0
   table_calendar: ^3.0.9
 
+# ===================== DEV DEPENDENCIES =====================
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
+# ===================== FLUTTER CONFIG =====================
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
   assets:
+    # logo & background
     - assets/images/LogoUmah_Banten.png
+    - assets/images/LogoBanten.png
     - assets/images/Background_Banten.png
     - assets/images/Logobantenataskanan.png
     - assets/images/logokabupaten.png
 
+    # kegiatan
     - assets/images/kegiatan1.png
     - assets/images/kegiatan2.png
 
+    # main background
     - assets/images/Backgroundmain.png
     - assets/images/Backgroundmain2.png
     - assets/images/beritaInformasiHome.png
 
+    # event
     - assets/images/event1.png
     - assets/images/event2.png
 
+    # galeri
     - assets/images/galeri1.png
     - assets/images/galeri2.png
     - assets/images/galeri3.png
@@ -86,6 +59,7 @@ flutter:
     - assets/images/galeri7.png
     - assets/images/galeri8.png
 
+    # login & laporan
     - assets/images/bglogin.png
     - assets/images/logoUmahBantenpolos.png
     - assets/images/bg_galeri.png
@@ -94,8 +68,44 @@ flutter:
     - assets/images/laporan3.png
     - assets/images/laporan4.png
 
+    # cctv
     - assets/images/IconCCTV1.png
     - assets/images/IconCCTVbener.png
     - assets/images/IconCCTVbenerbg.png
 
- 
+    # umum
+    - assets/images/fingerprint.png
+    - assets/images/umum2.png
+    - assets/images/umum3.png
+    - assets/images/umum4.png
+    - assets/images/umum5.png
+    - assets/images/umum6.png
+    - assets/images/umum7.png
+    - assets/images/umum8.png
+    - assets/images/umum9.png
+
+    # monitoring
+    - assets/images/monitoring1.png
+    - assets/images/monitoring2.png
+    - assets/images/monitoring3.png
+    - assets/images/monitoring4fix.png
+
+    # administrator
+    - assets/images/admin1.png
+    - assets/images/admin2.png
+    - assets/images/admin3.png
+
+    # menu
+    - assets/images/menu1.png
+    - assets/images/menu2.png
+    - assets/images/menu3.png
+    - assets/images/menu4.png
+    - assets/images/menu5.png
+    - assets/images/menu6.png
+    - assets/images/menu7.png
+
+# ===================== APP ICON CONFIG =====================
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/LogoBanten.png"

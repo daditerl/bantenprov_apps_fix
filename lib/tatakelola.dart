@@ -27,18 +27,7 @@ class _TataKelolaPageState extends State<TataKelolaPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-
       extendBody: true,
-
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF273977)),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
-
       body: Stack(
         children: [
           Positioned.fill(
@@ -62,15 +51,15 @@ class _TataKelolaPageState extends State<TataKelolaPage> {
                 _buildSection(
                   title: "Umum",
                   items: [
-                    _menuItem(Icons.fingerprint, "E-SIGN"),
-                    _menuItem(Icons.mail, "WebMail"),
-                    _menuItem(Icons.cloud, "Drive Cloud"),
-                    _menuItem(Icons.circle, "SIMPELIN"),
-                    _menuItem(Icons.folder, "DMS PPID"),
-                    _menuItem(Icons.view_list, "SIMASTEN"),
-                    _menuItem(Icons.security, "SERAMBI"),
-                    _menuItem(Icons.insert_drive_file, "Sireda"),
-                    _menuItem(Icons.shield, "SIREDA"),
+                    _menuItem("assets/images/fingerprint.png", "E-SIGN"),
+                    _menuItem("assets/images/umum2.png", "WebMail"),
+                    _menuItem("assets/images/umum3.png", "Drive Cloud"),
+                    _menuItem("assets/images/umum4.png", "SIMPELIN"),
+                    _menuItem("assets/images/umum5.png", "DMS PPID"),
+                    _menuItem("assets/images/umum6.png", "SIMASTEN"),
+                    _menuItem("assets/images/umum7.png", "SERAMBI"),
+                    _menuItem("assets/images/umum8.png", "Sireda"),
+                    _menuItem("assets/images/umum9.png", "SIREDA"),
                   ],
                 ),
 
@@ -80,10 +69,10 @@ class _TataKelolaPageState extends State<TataKelolaPage> {
                 _buildSection(
                   title: "Monitoring",
                   items: [
-                    _menuItem(Icons.hub, "NMS"),
-                    _menuItem(Icons.settings, "SIPANSER"),
-                    _menuItem(Icons.api, "API Manager"),
-                    _menuItem(Icons.people, "Pimpinan"),
+                    _menuItem("assets/images/monitoring1.png", "NMS"),
+                    _menuItem("assets/images/monitoring2.png", "SIPANSER"),
+                    _menuItem("assets/images/monitoring3.png", "API Manager"),
+                    _menuItem("assets/images/monitoring4fix.png", "Pimpinan"),
                   ],
                 ),
 
@@ -93,14 +82,44 @@ class _TataKelolaPageState extends State<TataKelolaPage> {
                 _buildSection(
                   title: "Administrator",
                   items: [
-                    _menuItem(Icons.person, "Users"),
-                    _menuItem(Icons.shield, "Roles"),
-                    _menuItem(Icons.settings, "Settings"),
+                    _menuItem("assets/images/admin1.png", "Users"),
+                    _menuItem("assets/images/admin2.png", "Roles"),
+                    _menuItem("assets/images/admin3.png", "Settings"),
                   ],
                 ),
 
                 const SizedBox(height: 100),
               ],
+            ),
+          ),
+          // ================= BACK BUTTON =================
+          Positioned(
+            top: 12,
+            left: 20,
+            child: SafeArea(
+              left: false, // 👈 PENTING
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.15),
+                        blurRadius: 6,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                    Icons.arrow_back,
+                    size: 18,
+                    color: Color(0xFF273977),
+                  ),
+                ),
+              ),
             ),
           ),
         ],
@@ -238,9 +257,9 @@ class _TataKelolaPageState extends State<TataKelolaPage> {
   // ----------------------------------------------------------
   //                    MENU ITEM (4 / ROW)
   // ----------------------------------------------------------
-  Widget _menuItem(IconData icon, String label) {
+  Widget _menuItem(String assetPath, String label) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width / 4 - 28, // 👉 4 per baris
+      width: MediaQuery.of(context).size.width / 4 - 28, // 4 per baris
       child: Column(
         children: [
           Container(
@@ -249,10 +268,13 @@ class _TataKelolaPageState extends State<TataKelolaPage> {
               color: Colors.blue.shade100.withOpacity(0.4),
               shape: BoxShape.circle,
             ),
-            child: Icon(
-              icon,
-              size: 24,
-              color: const Color(0xff1A4892),
+            child: Image.asset(
+              assetPath,
+              width: 24,
+              height: 24,
+              fit: BoxFit.contain,
+              color: const Color(0xFF1985BF), // RGB(25, 133, 191)
+              colorBlendMode: BlendMode.srcIn,
             ),
           ),
           const SizedBox(height: 6),

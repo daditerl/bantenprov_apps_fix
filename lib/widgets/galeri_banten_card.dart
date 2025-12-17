@@ -50,7 +50,8 @@ class GaleriBantenCard extends StatelessWidget {
       {
         "image": "assets/images/galeri7.png",
         "title": "Festival Kuliner Khas Banten qwerty",
-        "url": "https://example.com/example7"
+        "url":
+            "https://bantenprov.go.id/video/banten-pastikan-harga-pangan-aman-jelang-nataru-banten-sepekan"
       },
       {
         "image": "assets/images/galeri8.png",

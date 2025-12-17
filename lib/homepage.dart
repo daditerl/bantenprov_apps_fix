@@ -51,13 +51,13 @@ class _HomePageState extends State<HomePage> {
 
   final List<Map<String, dynamic>> _menuItems = [
     {'icon': 'assets/images/IconCCTVbenerbg.png', 'label': 'CCTV'},
-    {'icon': 'assets/images/iconSpanLapor.png', 'label': 'Span Lapor'},
-    {'icon': 'assets/images/iconWBS.png', 'label': 'WBS'},
-    {'icon': 'assets/images/iconHibah.png', 'label': 'Hibah Bansos'},
-    {'icon': 'assets/images/iconOPD.png', 'label': 'OPD'},
-    {'icon': 'assets/images/iconInfoPublik.png', 'label': 'Info Publik'},
-    {'icon': 'assets/images/iconFAQ.png', 'label': 'FAQ'},
-    {'icon': 'assets/images/iconLainnya.png', 'label': 'Lainnya'},
+    {'icon': 'assets/images/menu1.png', 'label': 'Span Lapor'},
+    {'icon': 'assets/images/menu2.png', 'label': 'WBS'},
+    {'icon': 'assets/images/menu3.png', 'label': 'Hibah Bansos'},
+    {'icon': 'assets/images/menu4.png', 'label': 'OPD'},
+    {'icon': 'assets/images/menu5.png', 'label': 'Info Publik'},
+    {'icon': 'assets/images/menu6.png', 'label': 'FAQ'},
+    {'icon': 'assets/images/menu7.png', 'label': 'Lainnya'},
   ];
 
   void _onNavTapped(int index) {
@@ -252,13 +252,14 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           CircleAvatar(
                             radius: 26,
-                            backgroundColor: Colors.indigo.shade100,
+                            backgroundColor:
+                                Colors.blue.shade100.withOpacity(0.4),
                             child: Image.asset(
                               item['icon'],
                               width: 26,
                               height: 26,
                               color: const Color(
-                                  0xFF1A4892), // <-- warna biru branding Banten
+                                  0xFF1985BF), // <-- warna biru branding Banten
                               colorBlendMode: BlendMode.srcIn,
                               fit: BoxFit.contain,
                             ),

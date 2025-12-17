@@ -95,8 +95,7 @@ class LoginPage extends StatelessWidget {
                               SizedBox(height: height * 0.01),
                               TextField(
                                 decoration: InputDecoration(
-                                  hintText:
-                                      "Cth : 361837132 / abcdef@bantenprov.go.id",
+                                  hintText: "321321/abcdef@bantenprov.go.id",
                                   hintStyle:
                                       const TextStyle(color: Colors.grey),
                                   filled: true,
