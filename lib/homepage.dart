@@ -4,6 +4,9 @@ import 'widgets/kalenderbanten_card.dart';
 import 'widgets/galeri_banten_card.dart';
 import 'widgets/laporan_kinerja.dart';
 import 'package:bantenprov_apps/loginpage.dart';
+import 'package:bantenprov_apps/layananpublikpage.dart';
+import 'package:bantenprov_apps/pages/beritapage.dart';
+import 'widgets/sidebarpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -71,16 +74,21 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      drawer: const SidebarPage(),
       backgroundColor: Color(0xf1f1f1f1),
       appBar: AppBar(
         backgroundColor: Color(0xe9e9e9),
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            color: Color(0xFF55ADDD),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(
+              Icons.menu,
+              color: Color(0xFF55ADDD),
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
-          onPressed: () {},
         ),
         title: const SizedBox(height: 0),
         centerTitle: true,
@@ -436,19 +444,29 @@ class _HomePageState extends State<HomePage> {
 
                         // Tombol Lihat Semua
                         Center(
-                          child: Container(
-                            width: 140,
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                            decoration: BoxDecoration(
-                              color: const Color(0xff1A76D1),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Text(
-                              "Lihat Semua",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const BeritaPage(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              width: 140,
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              decoration: BoxDecoration(
+                                color: const Color(0xff1A76D1),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Text(
+                                "Lihat Semua",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -498,8 +516,25 @@ class _HomePageState extends State<HomePage> {
           child: BottomNavigationBar(
             currentIndex: _selectedIndex,
             onTap: (index) {
-              if (index == 2) {
-                // 👉 Navigasi ke LoginPage
+              setState(() {
+                _selectedIndex = index;
+              });
+
+              if (index == 0) {
+                // HOME
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+              } else if (index == 1) {
+                // ✅ LAYANAN PUBLIK (PASTI PINDAH)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const LayananPublikPage()),
+                );
+              } else if (index == 2) {
+                // TATA KELOLA / LOGIN
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const LoginPage()),

@@ -83,6 +83,7 @@ flutter:
     - assets/images/umum7.png
     - assets/images/umum8.png
     - assets/images/umum9.png
+    
 
     # monitoring
     - assets/images/monitoring1.png
@@ -103,6 +104,94 @@ flutter:
     - assets/images/menu5.png
     - assets/images/menu6.png
     - assets/images/menu7.png
+
+    # umum
+    - assets/images/hibah_bansos.png
+    - assets/images/jadwal_dokter.png
+    - assets/images/span_lapor.png
+    - assets/images/cctv.png
+    - assets/images/lpse.png
+    - assets/images/wbs.png
+    - assets/images/pkb.png
+    - assets/images/menara_banten.png
+    - assets/images/siloker.png
+    - assets/images/csirt.png
+    - assets/images/bumilfit.png
+    - assets/images/pendaftaran_pasien.png
+    - assets/images/sibenda.png
+    - assets/images/simanis.png
+    - assets/images/laju_pkb.png
+    - assets/images/aduan_konten.png
+    - assets/images/rekrutment.png
+    - assets/images/skm.png
+    - assets/images/sipelaku.png
+    - assets/images/antrisamsat.png
+    - assets/images/sisi_baja.png
+    - assets/images/sitatap.png
+    - assets/images/esapa.png
+    - assets/images/simparda.png
+    - assets/images/etoko_pkk.png
+    - assets/images/rsud_malimping.png
+    - assets/images/damkar.png
+    - assets/images/antri_samsat.png
+    - assets/images/ikm_bapenda.png
+
+# data
+    - assets/images/jdih.png
+    - assets/images/satu_data.png
+    - assets/images/eppid.png
+    - assets/images/gistaru.png
+    - assets/images/sipagi.png
+    - assets/images/edasawisma.png
+    - assets/images/open_data.png
+    - assets/images/jdih_dprd.png
+    - assets/images/sidakep.png
+    - assets/images/batu_pusaka.png
+    - assets/images/sidakbanten.png
+
+# kabupaten kota
+    - assets/images/kabupaten_lebak.png
+    - assets/images/kabupaten_pandeglang.png
+    - assets/images/kabupaten_serang.png
+    - assets/images/kabupaten_tangerang.png
+    - assets/images/kota_cilegon.png
+    - assets/images/kota_serang.png
+    - assets/images/kota_tangerang.png
+    - assets/images/kota_tangerang_selatan.png
+
+# perizinan
+    - assets/images/sipeka.png
+    - assets/images/oss.png
+    - assets/images/potensi_investasi.png
+    - assets/images/sipitak.png
+    - assets/images/perizinan_lingkungan.png
+
+# profile
+    - assets/images/jonggunpark.jpeg
+
+# kalender & berita
+    - assets/images/ppbanten.png
+    - assets/images/backgroundkalender.png
+    - assets/images/berita1.png
+    - assets/images/berita2.png
+    - assets/images/berita3.png
+    - assets/images/berita4.png
+    - assets/images/berita5.png
+    - assets/images/berita6.png
+
+# share
+    - assets/images/wa.png
+    - assets/images/zoom.png
+    - assets/images/drive.png
+    - assets/images/instagram.png
+    - assets/images/gmail.png
+    - assets/images/facebook.png
+    - assets/images/line.png
+    - assets/images/onedrive.png
+    - assets/images/chrome.png
+    - assets/images/telegram.png
+    - assets/images/teams.png
+    - assets/images/twitter.png
 
 # ===================== APP ICON CONFIG =====================
 flutter_icons:

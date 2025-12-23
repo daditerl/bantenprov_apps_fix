@@ -1,3 +1,4 @@
+import 'package:bantenprov_apps/pages/kalenderpage.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -176,7 +177,13 @@ class _KalenderBantenCardState extends State<KalenderBantenCard> {
               width: 170,
               height: 40,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const KalenderPage()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff1A76D1),
                   shape: RoundedRectangleBorder(
